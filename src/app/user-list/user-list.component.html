@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="row col-md-12 col-md-offset-2 custyle">
+    <a href="#" class="btn btn-primary btn-xs pull-right mt-3"><b>+</b> Add New User</a>
+    <table class="table table-striped custab mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Date of Birth</th>
+          <th>Modified</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let item of userList">
+        <td>{{item.id}}</td>
+        <td>{{item.first_name}}</td>
+        <td>{{item.last_name}}</td>
+        <th>{{item.email}}</th>
+        <th>{{item.mobile}}</th>
+        <th>{{item.dob | date}}</th>
+        <th>{{item.modified | date}}</th>
+        <td class="text-center"><a class='btn btn-info btn-xs' routerLink="/edit{{item.id}}"><span
+              class="glyphicon glyphicon-edit"></span>
+            Edit</a> <a (click)="deleteUser(item.id)" class="btn btn-danger btn-xs ml-2"><span
+              class="glyphicon glyphicon-remove"></span>
+            Del</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

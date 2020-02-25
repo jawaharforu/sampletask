@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="row col-md-6 col-md-offset-2 custyle">
+    <div class="main">
+      <div class="main-center">
+        <h5>Enter user details.</h5>
+        <form class="" method="post" (submit)="addUser()">
+
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="firstname" id="firstname"
+                placeholder="Enter your First Name" [(ngModel)]="first_name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="lastname" placeholder="Enter your Last Name"
+                [(ngModel)]="last_name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="email" placeholder="Enter your Email" [(ngModel)]="email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter your Mobile"
+                [(ngModel)]="mobile" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <dl-date-time-picker startView="day" maxView="year" minView="day" name="dob" minuteStep="3"
+                [(ngModel)]="dob">
+              </dl-date-time-picker>
+            </div>
+          </div>
+
+          <button class="btn btn-success" type="submit">SAVE</button>
+
+        </form>
+      </div>
+      <!--main-center"-->
+    </div>
+    <!--main-->
+  </div>
+</div>
